@@ -13,11 +13,13 @@ class YTConverterApp(ctk.CTk):
     def __init__(self):
         super().__init__()
         self.title("YT Converter")
-        self.geometry("520x420")
-        self.resizable(False, False)
+        self.geometry("520x500")
+        self.resizable(True, True)
 
         # Title
-        ctk.CTkLabel(self, text="YouTube Converter", font=ctk.CTkFont(size=22, weight="bold")).pack(pady=(24, 4))
+        ctk.CTkLabel(self, text="YouTube Converter", font=ctk.CTkFont(size=30, weight="bold")).pack(pady=(24, 4))
+        ctk.CTkLabel(self, text="Made by TheNullAstris", text_color="#c084fc",
+             font=ctk.CTkFont(size=20)).pack(pady=(4, 0))
         ctk.CTkLabel(self, text="Download videos or audio from YouTube", text_color="gray").pack()
 
         # URL input
@@ -53,11 +55,12 @@ class YTConverterApp(ctk.CTk):
         # Button
         self.btn = ctk.CTkButton(self, text="⬇  Convert & Download", width=220, height=44,
                                   font=ctk.CTkFont(size=14, weight="bold"), command=self.start_download)
-        self.btn.pack(pady=18)
+        self.btn.pack(pady=10)
 
         # Output folder label
         ctk.CTkLabel(self, text=f"Saves to: {DOWNLOAD_DIR}", text_color="gray",
                      font=ctk.CTkFont(size=11)).pack()
+
 
     def start_download(self):
         url = self.url_entry.get().strip()
