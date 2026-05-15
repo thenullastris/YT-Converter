@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=YT Converter
+Comment=Download and convert YouTube videos
+Exec=app.py
+Icon=yt-converter
+Type=Application
+Categories=AudioVideo;Network;
+Terminal=false

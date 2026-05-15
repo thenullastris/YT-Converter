@@ -1,0 +1,45 @@
+version: 1
+script:
+  - rm -rf AppDir || true
+
+AppDir:
+  path: ./AppDir
+  app_info:
+    id: com.khinphunnadet.ytconverter
+    name: YT Converter
+    icon: yt-converter
+    version: 1.0.0
+    exec: usr/bin/python3
+    exec_args: "$APPDIR/usr/src/app.py $@"
+
+  apt:
+    arch: amd64
+    sources:
+      - sourceline: 'deb [arch=amd64] http://archive.ubuntu.com/ubuntu jammy main restricted universe multiverse'
+        key_url: 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x871920D1991BC93C'
+    include:
+      - python3
+      - python3-pip
+      - python3-tk
+      - ffmpeg
+      - libgtk-3-0
+    exclude: []
+
+  files:
+    include: []
+    exclude:
+      - usr/share/man
+      - usr/share/doc/*/README.*
+      - usr/share/doc/*/changelog.*
+      - usr/share/doc/*/NEWS.*
+      - usr/share/doc/*/TODO.*
+
+  after_bundle:
+    - pip3 install --target=$APPDIR/usr/lib/python3/dist-packages customtkinter yt-dlp
+    - mkdir -p $APPDIR/usr/src
+    - cp app.py $APPDIR/usr/src/
+
+AppImage:
+  arch: x86_64
+  update-information: None
+  sign-key: None

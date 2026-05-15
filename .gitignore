@@ -1,0 +1,6 @@
+dist/
+build/
+appimage-build/
+*.spec
+__pycache__/
+AppDir/
