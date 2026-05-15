@@ -31,4 +31,4 @@ chmod +x build-appimage.sh
 Grab the latest binary from [Releases](https://github.com/thenullastris/yt-converter/releases).
 
 ## Built by
-[Khin Phunnadet](url)](https://github.com/thenullastris)
+[KhinPhunnadet](url)](https://github.com/thenullastris)
