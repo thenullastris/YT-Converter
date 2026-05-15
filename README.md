@@ -15,7 +15,7 @@ A simple YouTube video/audio downloader for Linux, built with Python and CustomT
 
 ## Run from source
 ```bash
-git clone https://github.com/thenullastris/yt-converter.git
+git clone https://github.com/thenullastris/YT-Converter.git
 cd yt-converter
 chmod +x run.sh
 ./run.sh
@@ -28,7 +28,7 @@ chmod +x build-appimage.sh
 ```
 
 ## Download
-Grab the latest binary from [Releases](https://github.com/thenullastris/yt-converter/releases).
+Grab the latest binary from [Releases](https://github.com/thenullastris/YT-Converter/releases).
 
 ## Built by
 [Khin Phunnadet](https://github.com/thenullastris)
